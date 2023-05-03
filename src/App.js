@@ -1,10 +1,20 @@
 import './App.css';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
+  const [filme, setFilmes] = useState()
 
-    </div>
+
+  useEffect(() => {
+    
+  })
+
+  return (
+    <>
+
+
+    </>
   );
 }
 
