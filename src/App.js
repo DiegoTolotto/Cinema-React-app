@@ -20,8 +20,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path="/filmes" element={<PostFilme />}/>
-        <Route path="/deletafilmes" element={<DeletaFilme/>}/>
-        
+        <Route path="/deletafilmes" element={<DeletaFilme/>}/>      
       </Routes>
     </Router>
 

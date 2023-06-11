@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, {useEffect, useState} from "react";
+import NavBar from "../Paginas/NavBar";
 
 
 function DeleteFilme () {
@@ -12,10 +13,11 @@ function DeleteFilme () {
 
      return(
         <>
-       <textarea 
+        <NavBar/>
+       <input 
         value={id}
         onChange={(e) =>setId(e.target.value)}
-        ></textarea>
+        ></input>
 
         <button onClick={deleta}>deleta</button>
         
