@@ -15,6 +15,9 @@ function NavBar() {
                         <Link to="/filmes">Adicionar filme</Link>
                     </li>
 
+                    <li>
+                        <Link to="/deletafilmes">Remover filme</Link>
+                    </li>
                 </ul>
             </header>
               

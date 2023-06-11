@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import NavBar from "../Paginas/NavBar";
 
 
 function PostFilme() {
@@ -32,7 +33,7 @@ function PostFilme() {
 
   return (
     <>
-
+      <NavBar/>
       <div>
         <form >
           <label>classificação</label>

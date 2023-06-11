@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Home from './Paginas/Home';
 import NavBar from './Paginas/NavBar';
+import { Navbar } from 'react-bootstrap';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         
       </Routes>
     </Router>
+
     </>
   );
 }
