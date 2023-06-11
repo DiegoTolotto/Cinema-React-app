@@ -10,6 +10,7 @@ import {
   Route
 } from "react-router-dom";
 import Home from './Paginas/Home';
+import NavBar from './Paginas/NavBar';
 
 function App() {
   return (

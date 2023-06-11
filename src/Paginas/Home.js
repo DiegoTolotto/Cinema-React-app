@@ -1,45 +1,34 @@
-import React, {useState, useEffect} from "react";
-import NewHome from "./NewHome";
-
+import React, { useState, useEffect } from "react";
+import NavBar from "./NavBar";
+import PostFilme from "../components/postFilme";
+import CardFilme from "../components/CardFilme";
 
 function Home() {
-    const [filme, setFilmes] = useState([])
- 
+  const [filme, setFilmes] = useState([])
 
-    const url = `https://cinemaaws.onrender.com/filme`
-  
-    const buscaApi = () => {
-      fetch(url)
-        .then((res) => res.json())
-        .then((response) => setFilmes(response))
-    }
-  
-  
-  
-    useEffect(() => {
-      buscaApi()
-  
-    }, [])
-    console.log(filme)
-    return(
-      <>
-      <NewHome/>
-      {/* <div>{filme.map((data) => {
-        return (
-        <div>
-        <div>{data._id}</div>
-        <div>{data.nome}</div>
-        <div>{data.genero}</div>
-        <div>{data.classificacao}</div>
-        <div>{data.descricao}</div>
-        <div>{data.tempoDeDuracao}</div>
-        <div>{data.valor}</div>
-        <div><img width={50} height={100} src={data.link} alt={data.nome} /></div>
-      </div>
-    )
-  })}</div> */}
-  </>
-)
+
+  const url = `https://cinemaaws.onrender.com/filme`
+
+  const buscaApi = () => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((response) => setFilmes(response))
+  }
+
+
+
+  useEffect(() => {
+    buscaApi()
+
+  }, [])
+  console.log(filme)
+  return (
+    <>
+      <NavBar/>
+      <CardFilme/>
+      
+    </>
+  )
 }
 
 export default Home;
