@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-around;
     background-color: aqua;
+    padding: 10px;
 }
 
 ul {
