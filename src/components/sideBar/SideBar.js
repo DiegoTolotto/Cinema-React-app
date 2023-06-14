@@ -8,9 +8,13 @@ function SideBar() {
     const navigate = useNavigate()
     return(
         <div className="contentSideBar">
-            <Menu items={[
-                {label: "home",
-                  
+            <Menu 
+            onClick={({key})=>{
+                navigate(key)
+            }}
+            items={[
+                {   label: "home",
+                    key: "/",
                     },
                 {label: "home"},
                 {label: "home"},
