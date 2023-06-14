@@ -2,8 +2,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
+}
+
+.logo {
+    height: 70px;
 }
 
 ul {

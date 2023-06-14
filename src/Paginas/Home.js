@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 import PostFilme from "../components/postFilme";
 import CardFilme from "../components/CardFilme";
+import SideBar from "../components/sideBar/SideBar";
 
 function Home() {
   const [filme, setFilmes] = useState([])
@@ -25,6 +26,7 @@ function Home() {
   return (
     <>
       <NavBar/>
+      <SideBar/>
       <CardFilme/>
       
     </>

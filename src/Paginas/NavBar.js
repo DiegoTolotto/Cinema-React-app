@@ -4,13 +4,15 @@ import "./navbar.css"
 import logo from "./imgs/logo.png"
 
 
+
+
 function NavBar() {
     return (
         <>
             <header >
                 <ul className="nav">
 
-                    <img src={logo}/>
+                    <img className="logo" src={logo}/>
                     <li>
                         <Link to="/">Home</Link>
                     </li>
