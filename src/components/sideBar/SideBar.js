@@ -2,6 +2,11 @@ import React from "react";
 import {Menu} from "antd";
 import "./sideBar.css"
 import { useNavigate } from "react-router-dom";
+import  {   
+    HomeOutlined,
+    PlusSquareOutlined,
+    MinusSquareOutlined
+} from "@ant-design/icons"
 
 
 function SideBar() {
@@ -15,9 +20,16 @@ function SideBar() {
             items={[
                 {   label: "home",
                     key: "/",
+                    icon: <HomeOutlined/>
                     },
-                {label: "home"},
-                {label: "home"},
+                {label: "Adicionar filmes",
+                 key: "/filmes",
+                 icon: <PlusSquareOutlined />,   
+                    },
+                {label: "Remover filmes",
+                 key: "/deletafilmes",
+                 icon: <MinusSquareOutlined />,
+                    },
                 {label: "home"},
             ]}/>
         </div>

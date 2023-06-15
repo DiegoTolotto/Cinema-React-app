@@ -12,13 +12,14 @@ import {
 import Home from './Paginas/Home';
 import NavBar from './Paginas/NavBar';
 import { Navbar } from 'react-bootstrap';
+import SideBar from './components/sideBar/SideBar';
 
 function App() {
   return (
     <>
     <Router>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<div><Home/></div>}/>
         <Route path="/filmes" element={<PostFilme />}/>
         <Route path="/deletafilmes" element={<DeletaFilme/>}/>      
       </Routes>

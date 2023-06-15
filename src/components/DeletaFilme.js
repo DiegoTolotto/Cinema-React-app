@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, {useEffect, useState} from "react";
 import NavBar from "../Paginas/NavBar";
+import SideBar from "./sideBar/SideBar";
 
 
 function DeleteFilme () {
@@ -14,6 +15,7 @@ function DeleteFilme () {
      return(
         <>
         <NavBar/>
+        <SideBar/>
        <input 
         value={id}
         onChange={(e) =>setId(e.target.value)}
