@@ -35,7 +35,7 @@ function PostFilme() {
   return (
     <>
       <NavBar/>
-      <SideBar/>
+
       <div>
         <form >
           <label>classificação</label>

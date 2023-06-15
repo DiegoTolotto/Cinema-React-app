@@ -26,7 +26,7 @@ function Home() {
   return (
     <>
       <NavBar/>
-      <SideBar/>
+      
       <CardFilme/>
       
     </>

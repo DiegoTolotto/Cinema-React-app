@@ -15,7 +15,7 @@ function DeleteFilme () {
      return(
         <>
         <NavBar/>
-        <SideBar/>
+
        <input 
         value={id}
         onChange={(e) =>setId(e.target.value)}

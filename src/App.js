@@ -14,20 +14,29 @@ import NavBar from './Paginas/NavBar';
 import { Navbar } from 'react-bootstrap';
 import SideBar from './components/sideBar/SideBar';
 
+
 function App() {
   return (
-    <>
-    <Router>
-      <Routes>
-        <Route path='/' element={<div><Home/></div>}/>
-        <Route path="/filmes" element={<PostFilme />}/>
-        <Route path="/deletafilmes" element={<DeletaFilme/>}/>      
-      </Routes>
-    </Router>
-
-    </>
+    <div>
+      <SideBar/>
+      <Content />
+    </div>
   );
 }
+
+function Content () {
+  return   <div>
+
+      <Routes>
+        <Route path='/' element={<div><Home/></div>}/>
+        <Route path="/filmes" element={<div><PostFilme /></div>}/>
+        <Route path="/deletafilmes" element={<DeletaFilme/>}/>      
+      </Routes>
+
+  </div>;
+  
+}
+
 
 
 export default App;
