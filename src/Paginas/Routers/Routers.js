@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import PostFilme from './components/postFilme';
-import DeletaFilme from './components/DeletaFilme';
+import PostFilme from '../../components/postFilme';
+import DeletaFilme from '../../components/DeletaFilme';
+import Home from "../Home"
 import {
     BrowserRouter as Router,
     Routes,
     Route
 } from "react-router-dom";
 
-function Content() {
+function Routers() {
     return (
         <div>
             <Routes>
@@ -19,3 +20,5 @@ function Content() {
     );
 
 }
+
+export default Routers;

@@ -7,14 +7,15 @@ import {
     PlusSquareOutlined,
     MinusSquareOutlined
 } from "@ant-design/icons"
+import Routers from "../../Paginas/Routers/Routers";
 
 
 function SideBar() {
     const navigate = useNavigate()
     return (
-
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div className="contentSideBar">
             <Menu
+            style={{}}
                 onClick={({ key }) => {
                     navigate(key)
                 }}
@@ -36,7 +37,7 @@ function SideBar() {
                     },
                     { label: "home" },
                 ]}></Menu>
-            <div>sla</div>
+            <Routers />
         </div>
 
     )

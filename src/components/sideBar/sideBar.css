@@ -1,0 +1,4 @@
+.contentSideBar {
+display: flex;
+flex-direction: row; 
+}
