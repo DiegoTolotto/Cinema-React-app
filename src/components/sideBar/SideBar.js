@@ -14,30 +14,34 @@ function SideBar() {
     const navigate = useNavigate()
     return (
         <div className="contentSideBar">
-            <Menu
-            style={{}}
-                onClick={({ key }) => {
-                    navigate(key)
-                }}
-                items={[
-                    {
-                        label: "home",
-                        key: "/",
-                        icon: <HomeOutlined />
-                    },
-                    {
-                        label: "Adicionar filmes",
-                        key: "/filmes",
-                        icon: <PlusSquareOutlined />,
-                    },
-                    {
-                        label: "Remover filmes",
-                        key: "/deletafilmes",
-                        icon: <MinusSquareOutlined />,
-                    },
-                    { label: "home" },
-                ]}></Menu>
-            <Routers />
+            <div className="containerMenu">
+                <Menu
+                    className="menu"
+                    onClick={({ key }) => {
+                        navigate(key)
+                    }}
+                    items={[
+                        {
+                            label: "home",
+                            key: "/",
+                            icon: <HomeOutlined />
+                        },
+                        {
+                            label: "Adicionar filmes",
+                            key: "/filmes",
+                            icon: <PlusSquareOutlined />,
+                        },
+                        {
+                            label: "Remover filmes",
+                            key: "/deletafilmes",
+                            icon: <MinusSquareOutlined />,
+                        },
+                        // { label: "home" },
+                    ]}></Menu>
+            
+                <Routers className="main"/>
+            </div>
+            
         </div>
 
     )

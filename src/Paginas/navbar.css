@@ -1,13 +1,19 @@
 .nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
+    justify-content: space-between;
+    background-color: rgb(221, 193, 193);
+    padding: 10px 150px 0px 100px;
 }
 
 .logo {
-    height: 70px;
+    height: 100px;
+    width: 100px;
+}
+
+.inputSearch {
+    margin-top: 30px;
+    width: 250px;
 }
 
 ul {

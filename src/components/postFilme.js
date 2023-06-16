@@ -1,8 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import NavBar from "../Paginas/NavBar";
-import SideBar from "./sideBar/SideBar";
 
 
 function PostFilme() {
@@ -34,11 +32,9 @@ function PostFilme() {
 
   return (
     <>
-      <NavBar/>
-
       <div>
         <form >
-          <label>classificação</label>
+          <label>Classificação</label>
           <input
             className="campo-de-busca"
             id="classificacao"
@@ -46,7 +42,7 @@ function PostFilme() {
             onChange={(e) => setClassificacao(e.target.value)}
           ></input><br /><br />
 
-          <label>descrição</label>
+          <label>Descrição</label>
           <input
             className="campo-de-busca"
             id="descricao"
