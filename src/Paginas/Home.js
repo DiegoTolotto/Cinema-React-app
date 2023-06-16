@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import PostFilme from "../components/postFilme";
 import CardFilme from "../components/CardFilme";
 import SideBar from "../components/sideBar/SideBar";
+import "./home.css"
 
 function Home() {
   const [filme, setFilmes] = useState([])
@@ -24,12 +25,13 @@ function Home() {
   }, [])
   console.log(filme)
   return (
-    <>
+    <div className="homeB">
+
       <NavBar/>
       
       <CardFilme/>
       
-    </>
+    </div>
   )
 }
 

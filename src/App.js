@@ -19,23 +19,12 @@ function App() {
   return (
     <div>
       <SideBar/>
-      <Content />
+      <Content/>
     </div>
   );
 }
 
-function Content () {
-  return   <div>
 
-      <Routes>
-        <Route path='/' element={<div><Home/></div>}/>
-        <Route path="/filmes" element={<div><PostFilme /></div>}/>
-        <Route path="/deletafilmes" element={<DeletaFilme/>}/>      
-      </Routes>
-
-  </div>;
-  
-}
 
 
 

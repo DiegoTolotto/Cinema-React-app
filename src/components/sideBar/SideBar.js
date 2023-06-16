@@ -12,32 +12,33 @@ import {
 function SideBar() {
     const navigate = useNavigate()
     return (
-        <>
-            <div className="contentSideBar">
-                <Menu
-                    onClick={({ key }) => {
-                        navigate(key)
-                    }}
-                    items={[
-                        {
-                            label: "home",
-                            key: "/",
-                            icon: <HomeOutlined />
-                        },
-                        {
-                            label: "Adicionar filmes",
-                            key: "/filmes",
-                            icon: <PlusSquareOutlined />,
-                        },
-                        {
-                            label: "Remover filmes",
-                            key: "/deletafilmes",
-                            icon: <MinusSquareOutlined />,
-                        },
-                        { label: "home" },
-                    ]}></Menu>
-            </div>
-        </>
+
+        <div style={{ display: "flex", flexDirection: "row" }}>
+            <Menu
+                onClick={({ key }) => {
+                    navigate(key)
+                }}
+                items={[
+                    {
+                        label: "home",
+                        key: "/",
+                        icon: <HomeOutlined />
+                    },
+                    {
+                        label: "Adicionar filmes",
+                        key: "/filmes",
+                        icon: <PlusSquareOutlined />,
+                    },
+                    {
+                        label: "Remover filmes",
+                        key: "/deletafilmes",
+                        icon: <MinusSquareOutlined />,
+                    },
+                    { label: "home" },
+                ]}></Menu>
+            <div>sla</div>
+        </div>
+
     )
 }
 
