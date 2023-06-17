@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import { Input } from 'antd';
 
 
 function PostFilme() {
@@ -35,12 +36,13 @@ function PostFilme() {
       <div>
         <form >
           <label>Classificação</label>
-          <input
+          <Input
+            showCount maxLength={20}
             className="campo-de-busca"
             id="classificacao"
             value={classificacao}
             onChange={(e) => setClassificacao(e.target.value)}
-          ></input><br /><br />
+          ></Input><br /><br />
 
           <label>Descrição</label>
           <input
