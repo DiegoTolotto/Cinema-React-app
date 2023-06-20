@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./deletaFilme.css"
+import { Input, Button } from 'antd';
 
 function DeleteFilme() {
     const [id, setId] = useState()
@@ -12,11 +13,13 @@ function DeleteFilme() {
 
     return (
         <div className="deletContent">
-            <input
-                className="inputDelet"
-                value={id}
-                onChange={(e) => setId(e.target.value)}
-            ></input>
+            <Input
+            showCount   
+            maxLength={20}
+            className="inputDelet"
+            value={id}
+            onChange={(e) => setId(e.target.value)}
+          ></Input><br /><br />
 
             <button
                 className="bntDelet"

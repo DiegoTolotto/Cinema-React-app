@@ -40,9 +40,9 @@ function PostFilme() {
         <div>
           <label>Classificação</label>
           <Input
-            showCount maxLength={20}
+            showCount   
+            maxLength={20}
             className="classificacao"
-            id="classificacao"
             value={classificacao}
             onChange={(e) => setClassificacao(e.target.value)}
           ></Input><br /><br />
