@@ -13,17 +13,18 @@ function DeleteFilme() {
 
     return (
         <div className="deletContent">
+            <label className="labelDelet">Adicione o ID do filme para deleta-lo</label>
             <Input
             showCount   
-            maxLength={20}
+            maxLength={30}
             className="inputDelet"
             value={id}
             onChange={(e) => setId(e.target.value)}
           ></Input><br /><br />
 
-            <button
+            <Button type="primary"
                 className="bntDelet"
-                onClick={deleta}>deleta</button>
+                onClick={deleta}>Deletar filme</Button>
 
         </div>
     )

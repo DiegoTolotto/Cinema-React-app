@@ -1,5 +1,15 @@
 .deletContent {
-    padding: 50px 20% 90% 80%;
-
+    padding: 60px 30% 90% 70%;
+    width: 300px;
 }
 
+
+.bntDelet {
+    margin: 0 45px 0 45px;
+    width: 200px;
+}
+
+.labelDelet {
+    margin: 0 20px 0 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
