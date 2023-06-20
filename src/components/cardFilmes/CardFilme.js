@@ -1,5 +1,5 @@
 import React, {useState, useEffect}  from "react";
-import "./cardFilme.css"
+
 
 function CardFilme() {
     const [filme, setFilmes] = useState([])

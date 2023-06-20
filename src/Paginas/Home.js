@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CardFilme from "../components/CardFilme";
+import CardFilme from "../components/cardFilmes/CardFilme";
 import "./home.css"
 
 function Home() {
