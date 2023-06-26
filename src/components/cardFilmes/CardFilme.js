@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card } from 'antd';
+import "./cardFilme.css"
 
 const { Meta } = Card;
 
@@ -30,20 +31,21 @@ function CardFilme() {
           <div>
             <Card
               hoverable
-              style={{ width: 240 }}
+              style={{ width: 150 }}
               cover={<img alt={data.nome} src={data.link} />}
             >
-              <Meta title="Europe Street beat" description={
+              <Meta  className="meta" 
+                title={
+                <div className="nome">{data.nome}</div>
+                } 
+                description={
                 <div>
-                  <div>{data._id}</div>
-                  <div className="nome">{data.nome}</div>
                   <div className="genero">{data.genero}</div>
                   <div className="classificacao">{data.classificacao}</div>
-                  <div className="descricao">{data.descricao}</div>
                 </div>
-              } />
+              }/>
             </Card>
-          
+
           </div>
         )
       })}</div>
