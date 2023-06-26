@@ -1,10 +1,13 @@
 .card  {
     margin: 10px;
-    
+
 }
 
 .nome {
     word-break: break-all;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
 }
 
 .meta{ 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Button, Modal } from 'antd';
+import { Card, Modal } from 'antd';
 import "./cardFilme.css"
 
 const { Meta } = Card;
@@ -16,7 +16,7 @@ function CardFilme() {
       .then((res) => res.json())
       .then((response) => setFilmes(response))
   }
-
+console.log(filme)
 
 
   useEffect(() => {
@@ -36,11 +36,10 @@ function CardFilme() {
               cover={<img alt={data.nome} src={data.link} />}
             >
               <Meta className="meta"
-                title={
-                  <div className="nome" style={{ fontSize: 10 }}>{data.nome}</div>
-                }
+                
                 description={
                   <div>
+                    <div className="nome">{data.nome}</div>
                     <div className="genero">{data.genero}</div>
                     <div className="classificacao">{data.classificacao}</div>
                   </div>
@@ -49,16 +48,16 @@ function CardFilme() {
 
             </div>
             <Modal
-              title="Modal 1000px width"
+              title={data.nome}
               centered
               open={open}
               onOk={() => setOpen(false)}
               onCancel={() => setOpen(false)}
               width={500}
             >
-              <p>some contents...</p>
-              <p>some contents...</p>
-              <p>some contents...</p>
+              <p>{data.descricao}</p>
+              <p>{data.descricao}</p>
+              <p>{data.descricao}</p>
             </Modal>
             
           </div>
