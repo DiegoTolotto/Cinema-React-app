@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CardFilme from "../components/cardFilmes/CardFilme";
 import "./home.css"
+import  Header  from "../components/header/Cabecalho";
 
 function Home() {
   const [filme, setFilmes] = useState([])
@@ -20,10 +21,10 @@ function Home() {
     buscaApi()
 
   }, [])
-  console.log(filme)
+
   return (
     <div className="homeB">
-
+      <Header />
       <CardFilme/>
       
     </div>

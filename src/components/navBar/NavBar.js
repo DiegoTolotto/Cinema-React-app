@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css"
-import logo from "../imgs/logo.png"
+import logo from "../imgs/logomaker.png"
 import { SearchOutlined } from "@ant-design/icons";
-import { Input, Space } from "antd";
+import { Input } from "antd";
 const { Search } = Input;
 
 
@@ -18,7 +18,7 @@ function NavBar() {
                         className="logo"
                         src={logo} />
                     <Search
-                    className="inputSearch"
+                        className="inputSearch"
                         placeholder="input search text"
                         onSearch={onSearch}
                         enterButton />
