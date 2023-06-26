@@ -2,13 +2,14 @@ import React from "react";
 import logo from "../imgs/logo.png"
 import { Input } from "antd";
 import { LoginOutlined, LogoutOutlined } from "@ant-design/icons";
+import "./cabecalho.css"
 const { Search } = Input;
 
 function Header() {
     const onSearch = (value) => console.log(value);
     return (
         <div>
-            <header>
+            <header className="contentHeader">
                 <div className="logo">
                     <img src={logo} />
                 </div>
@@ -20,7 +21,9 @@ function Header() {
                         enterButton />
                 </div>
                 <div className="login">
-                    <LoginOutlined />
+                    <LoginOutlined/>
+                </div>
+                <div className="logout">
                     <LogoutOutlined />
                 </div>
             </header>
