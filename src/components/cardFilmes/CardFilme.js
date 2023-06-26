@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Card } from 'antd';
+
+const { Meta } = Card;
 
 
 function CardFilme() {
@@ -25,12 +28,22 @@ function CardFilme() {
       <div>{filme.map((data) => {
         return (
           <div>
-            <div>{data._id}</div>
-            <div className="nome">{data.nome}</div>
-            <div className="genero">{data.genero}</div>
-            <div className="classificacao">{data.classificacao}</div>
-            <div className="descricao">{data.descricao}</div>
-            <div className=""><img width={50} height={100} src={data.link} alt={data.nome} /></div>
+            <Card
+              hoverable
+              style={{ width: 240 }}
+              cover={<img alt={data.nome} src={data.link} />}
+            >
+              <Meta title="Europe Street beat" description={
+                <div>
+                  <div>{data._id}</div>
+                  <div className="nome">{data.nome}</div>
+                  <div className="genero">{data.genero}</div>
+                  <div className="classificacao">{data.classificacao}</div>
+                  <div className="descricao">{data.descricao}</div>
+                </div>
+              } />
+            </Card>
+          
           </div>
         )
       })}</div>
