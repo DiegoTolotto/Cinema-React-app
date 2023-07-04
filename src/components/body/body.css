@@ -1,0 +1,8 @@
+.bodyB {
+    width: 680px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+}

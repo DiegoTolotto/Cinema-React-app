@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CardFilme from "../components/cardFilmes/CardFilme";
 import "./home.css"
-import { Carousel } from "antd";
 import Header from "../components/header/Cabecalho";
-
+import Body from "../components/body/Body";
 
   const contentStyle = {
     margin: 0,
@@ -41,7 +40,7 @@ function Home() {
   return (
     <div className="homeB">
       <Header />
-      <CardFilme />
+      <Body />
     </div>
   )
 }

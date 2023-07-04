@@ -26,7 +26,8 @@ console.log(filme)
   console.log(filme)
   return (
     <>
-      <div>{filme.map((data) => {
+      <div className="cardFilmes">
+        {filme.map((data) => {
         return (
           <div className="card">
             <div onClick={() => setOpen(true)}>

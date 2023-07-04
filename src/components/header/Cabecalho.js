@@ -20,11 +20,14 @@ function Header() {
                         onSearch={onSearch}
                         enterButton />
                 </div>
-                <div className="login">
-                    <LoginOutlined/>
-                </div>
-                <div className="logout">
-                    <LogoutOutlined />
+                <div className="buttonLog">
+
+                    <div className="login">
+                        <LoginOutlined/>
+                    </div>
+                    <div className="logout">
+                        <LogoutOutlined />
+                    </div>
                 </div>
             </header>
         </div>

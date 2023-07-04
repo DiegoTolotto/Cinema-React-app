@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Button, Drawer } from 'antd';
+import CardFilme from "../cardFilmes/CardFilme";
 
-function Drawer() {
+function Gaveta() {
 
     const [open, setOpen] = useState(false);
 
@@ -14,15 +15,10 @@ function Drawer() {
     };
     return (
         <div>
-            <body>
-                <Button type="primary" onClick={showDrawer}>
-                    Open
-                </Button>
-                <Drawer title="Basic Drawer" placement="right" onClose={onClose} open={open}>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                </Drawer>
+            <Button type="primary" onClick={showDrawer}>
+                Open
+            </Button>
+            <Drawer title="Basic Drawer" placement="right" onClose={onClose} open={open}>
                 <div className="sideBar">
                     <div className="carrinho"></div>
                     <div className="home"></div>
@@ -43,9 +39,9 @@ function Drawer() {
                     <div className="pipocaGrandeRefri"></div>
                     <div className="pipocaRefri"></div>
                 </div>
-            </body>
+            </Drawer>
         </div>
     )
 }
 
-export default Drawer;
+export default Gaveta;

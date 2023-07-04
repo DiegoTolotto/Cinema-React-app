@@ -4,6 +4,7 @@ import "./navbar.css"
 import logo from "../imgs/logomaker.png"
 import { SearchOutlined } from "@ant-design/icons";
 import { Input } from "antd";
+import DrawerMenu from "../gaveta/Gaveta";
 const { Search } = Input;
 
 
@@ -22,6 +23,7 @@ function NavBar() {
                         placeholder="input search text"
                         onSearch={onSearch}
                         enterButton />
+                        <DrawerMenu />
                 </ul>
             </header>
 
