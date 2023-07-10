@@ -100,8 +100,7 @@ function CardFilme() {
           width={500}
         >
           <p>{rs.descricao}</p>
-          <p>{rs.descricao}</p>
-          <p>{rs.descricao}</p>
+          <img style={{height: 150}} src={rs.link}/>
         </Modal>
         <div className="buttons">
           <button onClick={handleRightClick}>
