@@ -3,4 +3,4 @@ filmes em cartaz
 salas disponiveis
 combos de pipocas e refri
 compra para ingresso do filme do banner
-barra lateral
+menu lateral

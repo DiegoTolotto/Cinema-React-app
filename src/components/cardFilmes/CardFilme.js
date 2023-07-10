@@ -9,6 +9,7 @@ const { Meta } = Card;
 function CardFilme() {
   const [filme, setFilmes] = useState([])
   const [open, setOpen] = useState(false);
+  const [rs, setrs] = useState({})
   const carousel = useRef(null);
 
   const url = `https://cinemaaws.onrender.com/filme`
@@ -18,8 +19,13 @@ function CardFilme() {
       .then((res) => res.json())
       .then((response) => setFilmes(response))
   }
-  console.log(filme)
 
+  const showDetail = (id) => {
+
+    fetch(`https://cinemaaws.onrender.com/filme/${id}`)
+      .then(resposne => resposne.json())
+      .then(res => setrs(res))
+  }
 
   useEffect(() => {
     buscaApi()
@@ -36,21 +42,31 @@ function CardFilme() {
 
     carousel.current.scrollLeft += carousel.current.offsetWidth;
   };
-  console.log(filme)
+
   return (
     <>
       <div className="cardFilmes">
-      <div className="buttons">
+        <div className="buttons">
           <button onClick={handleLeftClick}>
             <LeftOutlined />
           </button>
 
         </div>
         <div className="carousel" ref={carousel}>
-          {filme.map((data) => {
+          {filme.map((data, index) => {
             return (
-              <div className="card">
-                <div onClick={() => setOpen(true)}>
+              <div
+                key={index}
+                className="card">
+
+                <div onClick={() => {
+                  showDetail(data._id)
+                  setOpen(true)
+                  }}> 
+
+                 
+                  {/* Clicando no card abre o modal */}
+                  
                   <Card
                     hoverable
                     style={{ width: 90 }}
@@ -68,23 +84,25 @@ function CardFilme() {
                   </Card>
 
                 </div>
-                <Modal
-                  title={data.nome}
-                  centered
-                  open={open}
-                  onOk={() => setOpen(false)}
-                  onCancel={() => setOpen(false)}
-                  width={500}
-                >
-                  <p>{data.descricao}</p>
-                  <p>{data.descricao}</p>
-                  <p>{data.descricao}</p>
-                </Modal>
 
               </div>
             )
           })}
         </div>
+
+
+        <Modal
+          title={rs.nome}
+          centered
+          open={open}
+          onOk={() => setOpen(false)}
+          onCancel={() => setOpen(false)}
+          width={500}
+        >
+          <p>{rs.descricao}</p>
+          <p>{rs.descricao}</p>
+          <p>{rs.descricao}</p>
+        </Modal>
         <div className="buttons">
           <button onClick={handleRightClick}>
             <RightOutlined />
