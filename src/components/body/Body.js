@@ -9,6 +9,7 @@ function Body() {
     return(
         <div>
             <body className="bodyB">
+                <BannerFilme/>
                 <CardFilme/>
                 <Combo/>
                 <CardFilme/>
