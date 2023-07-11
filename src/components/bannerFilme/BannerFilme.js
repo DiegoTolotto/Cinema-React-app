@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Card, Modal, Carousel } from 'antd';
-
-
-const { Meta } = Card;
+import './banner.css'
 
 
 function BannerFilme() {
   const [filmes, setFilmes] = useState([])
   const [open, setOpen] = useState(false);
 
-  const url = `https://cinemaaws.onrender.com/filme/646b8566c3195b2ec23c86f3`
+  const url = `https://cinemaaws.onrender.com/filme/`
 
   const buscaApi = () => {
     fetch(url)
@@ -26,13 +24,13 @@ console.log(filmes)
   console.log(filmes)
   return (
     <>
-      <div className="cardFilmes">
-        {filmes.map((data) => {
+      <div className="bannerContent">
+        {filmes.map((data, index) => {
         return (
-          <div className="carousel">
+          <div key={index} className="carouselBanner">
             <Carousel>
                 <div>
-                    <img src={data.link}/>
+                    <img src={data.link} className="banner"/>
                 </div>
             </Carousel>
             
