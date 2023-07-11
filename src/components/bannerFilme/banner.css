@@ -11,3 +11,9 @@
     margin: 20px;
     padding: 20px;
 }
+
+.banner .bannerContent {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}

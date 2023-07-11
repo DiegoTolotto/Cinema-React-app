@@ -14,14 +14,20 @@ function BannerFilme() {
       .then((res) => res.json())
       .then((response) => setFilmes(response))
   }
-console.log(filmes)
 
+  //função para passar para o slide anterior
+  const prevSlide = () => {
 
+  }
+    //função para passar para o proximo slide
+  const nesxtSlide = () => {
+
+  }
   useEffect(() => {
     buscaApi()
 
   }, [])
-  console.log(filmes)
+
   return (
     <>
       <div className="bannerContent">
