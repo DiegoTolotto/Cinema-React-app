@@ -21,28 +21,41 @@ function BannerFilme() {
     const novoIndex = primeroSlide ? filmes.length - 1 : index - 1;
     setIndex(novoIndex);
   }
-  //função para passar para o proximo slide
-  const nesxtSlide = () => {
 
+  //função para passar para o proximo slide
+  const nextSlide = () => {
+    const ultimoSlide = index === filmes.length - 1;
+    const novoIndex = ultimoSlide ? 0 : index + 1;
+    setIndex(novoIndex)
   }
+
+  console.log(index)
   useEffect(() => {
     buscaApi()
-    prevSlide()
+
   }, [])
 
   return (
-    <>
-      return (
-      <div key={index} className="carouselBanner">
+
+      <div className="carouselBanner">
         <Carousel>
           <div>
-            <img src={data.link} className="banner" />
+            <img src={filmes[index].link} className="banner" />
           </div>
         </Carousel>
+        <div>
+        <div onClick={prevSlide}>
+          prev
+        </div>
 
+        </div>
+        <div>
+        <div onClick={nextSlide}>
+          next
+        </div>
+
+        </div>
       </div>
-
-    </>
   )
 }
 
