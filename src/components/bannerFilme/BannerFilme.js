@@ -17,6 +17,7 @@ function BannerFilme() {
 
   //função para passar para o slide anterior
   const prevSlide = () => {
+    const isFirstSlide = filmes[0]
 
   }
     //função para passar para o proximo slide
@@ -25,7 +26,7 @@ function BannerFilme() {
   }
   useEffect(() => {
     buscaApi()
-
+    prevSlide()
   }, [])
 
   return (
