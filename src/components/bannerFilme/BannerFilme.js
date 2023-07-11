@@ -5,7 +5,7 @@ import './banner.css'
 
 function BannerFilme() {
   const [filmes, setFilmes] = useState([])
-  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
 
   const url = `https://cinemaaws.onrender.com/filme/`
 
@@ -17,8 +17,8 @@ function BannerFilme() {
 
   //função para passar para o slide anterior
   const prevSlide = () => {
-    const isFirstSlide = filmes[0]
-
+    const isFirstSlide = index === 0
+    
   }
     //função para passar para o proximo slide
   const nesxtSlide = () => {
