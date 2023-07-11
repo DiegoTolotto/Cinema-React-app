@@ -61,7 +61,10 @@ function CardFilme() {
 
                 <div onClick={() => {
                   showDetail(data._id)
-                  setOpen(true)
+                  setTimeout(() => {
+                    setOpen(true)
+                  }, 700)
+                  
                   }}> 
 
                  
