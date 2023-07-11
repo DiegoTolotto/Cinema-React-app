@@ -70,21 +70,14 @@ function CardFilme() {
                  
                   {/* Clicando no card abre o modal */}
                   
-                  <Card
+                  {/* <Card
                     hoverable
-                    style={{ width: 90 }}
-                    cover={<img alt={data.nome} src={data.link} />}
+                    style={{ width: 100 }}
+                    cover={
+                    }
                   >
-                    <Meta className="meta"
-
-                      description={
-                        <div>
-                          <div className="nome">{data.nome}</div>
-                          <div className="genero">{data.genero}</div>
-                          <div className="classificacao">{data.classificacao}</div>
-                        </div>
-                      } />
-                  </Card>
+                  </Card> */}
+                    <img alt={data.nome} src={data.link} className="filme"/>
 
                 </div>
 
@@ -94,17 +87,7 @@ function CardFilme() {
         </div>
 
 
-        <Modal
-          title={rs.nome}
-          centered
-          open={open}
-          onOk={() => setOpen(false)}
-          onCancel={() => setOpen(false)}
-          width={500}
-        >
-          <p>{rs.descricao}</p>
-          <img style={{height: 150}} src={rs.link}/>
-        </Modal>
+
         <div className="buttons">
           <button onClick={handleRightClick}>
             <RightOutlined />
