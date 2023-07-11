@@ -42,8 +42,8 @@ function BannerFilme() {
 
       </div>
 
-      )
     </>
+  )
 }
 
 export default BannerFilme;
