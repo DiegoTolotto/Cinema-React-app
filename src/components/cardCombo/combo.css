@@ -1,7 +1,13 @@
 .pipoca, .pipocaRefri {
-
+height: 100px;
+margin: 10px;
+border-radius: 10px;
+transition: width 0.5s, height 0.5s;
 }
 
-.pipocarefri {
-
-}
+.pipoca:hover, .pipocaRefri:hover {
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.87);
+    height: 105px;
+    cursor: pointer;
+    }
+    
