@@ -27,7 +27,7 @@ console.log(filmes)
   return (
     <>
       <div className="cardFilmes">
-        {filmes.filter((data) => {
+        {filmes.map((data) => {
         return (
           <div className="carousel">
             <Carousel>

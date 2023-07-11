@@ -28,7 +28,7 @@ function CardFilme() {
   }
 
   useEffect(() => {
-    buscaApi()
+    buscaApi();
 
   }, [])
 
@@ -59,25 +59,24 @@ function CardFilme() {
                 key={index}
                 className="card">
 
-                <div onClick={() => {
-                  showDetail(data._id)
-                  setTimeout(() => {
-                    setOpen(true)
-                  }, 700)
-                  
-                  }}> 
+                <div
+                  onClick={() => {
 
-                 
+                    showDetail(data._id);
+
+                    setTimeout(() => {
+                      setOpen(true);
+                    }, 700);
+
+                  }}>
+
                   {/* Clicando no card abre o modal */}
-                  
-                  {/* <Card
-                    hoverable
-                    style={{ width: 100 }}
-                    cover={
-                    }
-                  >
-                  </Card> */}
-                    <img alt={data.nome} src={data.link} className="filme"/>
+
+                  <img
+                    alt={data.nome}
+                    src={data.link}
+                    className="filme" />
+
 
                 </div>
 
@@ -85,7 +84,18 @@ function CardFilme() {
             )
           })}
         </div>
-
+       
+        <Modal
+                  title={rs.nome}
+                  centered
+                  open={open}
+                  onOk={() => setOpen(false)}
+                  onCancel={() => setOpen(false)}
+                  width={500}
+                >
+                  <p>{rs.descricao}</p>
+                  <img src={rs.link} style={{height: 150}}/>
+                </Modal>
 
 
         <div className="buttons">
@@ -99,3 +109,4 @@ function CardFilme() {
 }
 
 export default CardFilme;
+
