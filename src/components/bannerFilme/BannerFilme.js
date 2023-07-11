@@ -17,10 +17,11 @@ function BannerFilme() {
 
   //função para passar para o slide anterior
   const prevSlide = () => {
-    const isFirstSlide = index === 0
-    
+    const primeroSlide = index === 0
+    const novoIndex = primeroSlide ? filmes.length - 1 : index - 1;
+    setIndex(novoIndex);
   }
-    //função para passar para o proximo slide
+  //função para passar para o proximo slide
   const nesxtSlide = () => {
 
   }
@@ -31,21 +32,18 @@ function BannerFilme() {
 
   return (
     <>
-      <div className="bannerContent">
-        {filmes.map((data, index) => {
-        return (
-          <div key={index} className="carouselBanner">
-            <Carousel>
-                <div>
-                    <img src={data.link} className="banner"/>
-                </div>
-            </Carousel>
-            
+      return (
+      <div key={index} className="carouselBanner">
+        <Carousel>
+          <div>
+            <img src={data.link} className="banner" />
           </div>
-        )
-      })}</div>
+        </Carousel>
+
+      </div>
+
+      )
     </>
-  )
 }
 
 export default BannerFilme;
