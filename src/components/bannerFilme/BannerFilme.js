@@ -38,7 +38,7 @@ function BannerFilme() {
   return (
 
     <div className="bannerContent">
-{/* 
+      {/* 
       <div>
         <img src={filmes[index]} className="banner" />
       </div>
@@ -55,18 +55,18 @@ function BannerFilme() {
         </div>
 
       </div> */}
-      <Carousel autoplay>
+      <Carousel className="carouselBanner" autoplay>
         <div>
-          <img src={filmes[0].link} className="banner" />
+          <img alt={filmes[0].nome} src={filmes[0].link} className="banner" />
         </div>
         <div>
-          <img src={filmes[1].link} className="banner" />
-        </div>
-                <div>
-          <img src={filmes[2].link} className="banner" />
+          <img alt={filmes[1].nome} src={filmes[1].link} className="banner" />
         </div>
         <div>
-          <img src={filmes[3].link} className="banner" />
+          <img alt={filmes[2].nome} src={filmes[2].link} className="banner" />
+        </div>
+        <div>
+          <img alt={filmes[3].nome} src={filmes[3].link} className="banner" />
         </div>
       </Carousel>
     </div>
