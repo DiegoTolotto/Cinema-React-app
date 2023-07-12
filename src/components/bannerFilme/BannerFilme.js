@@ -37,33 +37,39 @@ function BannerFilme() {
 
   return (
 
-      <div className="bannerContent">
+    <div className="bannerContent">
+{/* 
+      <div>
+        <img src={filmes[index]} className="banner" />
+      </div>
 
-          <div>
-            <img src={filmes[index]} className="banner" />
-          </div>
-
-        <div>
+      <div>
         <div onClick={prevSlide}>
           prev
         </div>
 
-        </div>
-        <div>
+      </div>
+      <div>
         <div onClick={nextSlide}>
           next
         </div>
 
+      </div> */}
+      <Carousel autoplay>
+        <div>
+          <img src={filmes[0].link} className="banner" />
         </div>
-        <Carousel autoplay>
-          <div>
-            <img src={filmes[0]} className="banner"/>
-          </div>
-          <div>
-            <img src={filmes[1]} className="banner"/>
-          </div>
-        </Carousel>
-      </div>
+        <div>
+          <img src={filmes[1].link} className="banner" />
+        </div>
+                <div>
+          <img src={filmes[2].link} className="banner" />
+        </div>
+        <div>
+          <img src={filmes[3].link} className="banner" />
+        </div>
+      </Carousel>
+    </div>
   )
 }
 
