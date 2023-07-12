@@ -37,12 +37,12 @@ function BannerFilme() {
 
   return (
 
-      <div className="carouselBanner">
-        <Carousel>
+      <div className="bannerContent">
+
           <div>
-            <img src={filmes[index].link} className="banner" />
+            <img src={filmes[index]} className="banner" />
           </div>
-        </Carousel>
+
         <div>
         <div onClick={prevSlide}>
           prev
@@ -55,6 +55,14 @@ function BannerFilme() {
         </div>
 
         </div>
+        <Carousel autoplay>
+          <div>
+            <img src={filmes[0]} className="banner"/>
+          </div>
+          <div>
+            <img src={filmes[1]} className="banner"/>
+          </div>
+        </Carousel>
       </div>
   )
 }
