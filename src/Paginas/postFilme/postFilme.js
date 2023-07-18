@@ -15,6 +15,7 @@ function PostFilme() {
   const [nome, setNome] = useState("")
   const [tempoDeDuracao, setTempoDeDuracao] = useState("")
   const [valor, setValor] = useState("")
+  const [trailer, setTrailer] = useState("")
 
 
   const handleSubmit = () => {
@@ -24,6 +25,7 @@ function PostFilme() {
       descricao: descricao,
       genero: genero,
       link: link,
+      trailer: trailer,
       nome: nome,
     })
       .then((res) => res.data)
@@ -112,6 +114,17 @@ function PostFilme() {
             id="descricao"
             value={descricao}
             onChange={(e) => setDescricao(e.target.value)}
+          ></TextArea><br /><br />
+        </div>
+
+        <div>
+          <label>Trailer</label>
+          <TextArea
+            showCount maxLength={100}
+            className="campo-de-busca"
+            id="trailer"
+            value={trailer}
+            onChange={(e) => setTrailer(e.target.value)}
           ></TextArea><br /><br />
         </div>
 

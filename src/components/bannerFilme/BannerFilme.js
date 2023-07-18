@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card, Modal, Carousel } from 'antd';
+import ReactPlayer from "react-player";
 import './banner.css'
 
 
@@ -15,28 +16,29 @@ function BannerFilme() {
       .then((res) => res.json())
       .then((response) => setFilmes(response))
   }
-
+  console.log(filmes)
   useEffect(() => {
     buscaApi()
 
   }, [])
-
+  const urlS = ``
   return (
 
     <div className="bannerContent">
-     
+
       <Carousel className="carouselBanner" autoplay>
         <div>
-          <img alt={filmes[0].nome} src={filmes[0].link} className="banner" />
+          <ReactPlayer 
+          playing={true} 
+          light="https://uploads.jovemnerd.com.br/wp-content/uploads/2023/04/barbie_template_poster_site__52e29t424.jpg" 
+          url={filmes[17].trailer} className="banner" />
+
         </div>
         <div>
-          <img alt={filmes[1].nome} src={filmes[1].link} className="banner" />
+          <img alt={filmes[2]} src={filmes[2]} className="banner" />
         </div>
         <div>
-          <img alt={filmes[2].nome} src={filmes[2].link} className="banner" />
-        </div>
-        <div>
-          <img alt={filmes[3].nome} src={filmes[3].link} className="banner" />
+          <img alt={filmes[3]} src={filmes[3]} className="banner" />
         </div>
       </Carousel>
     </div>
