@@ -1,6 +1,53 @@
-banner
-filmes em cartaz
-salas disponiveis
-combos de pipocas e refri
-compra para ingresso do filme do banner
-menu lateral
+Cinemax
+
+	- Registra conta:
+		1ª Clicar em registar usuario;
+		2ª Adicionar Nome, email e senha;
+			(Se o email já foi registrado, rejeite);
+		3ª Clicar em registrar conta;
+		
+	- Login:
+		1ª Clicar em fazer login;
+		2ª Adicionar email e senha;
+		3ª Clicar em "fazer login";
+		4ª Verificar email;
+		5ª Verificar se a senha é compativel a email;	
+			(Caso contrário rejeitar);
+		6ª Ir para pagina inicial com nome do usuario no menu lateral;
+			(Remover botão de login e resgistar conta)
+
+	- Logout:
+		1ª Clicar em botão logout;
+		2ª confirmar ação;
+		3ª Ir para a pagina inicial com pedido de login;	
+
+	- Bilhete:
+		1ª Selecionar filme;
+		2ª Abrir modal;
+		3ª Clicar em comprar ingressos;
+		4ª Abrir gaveta com informações do bilhete;  
+		5ª Adicionar quantidade de assentos;
+		6ª Adicionar ao carrinho; 
+
+	- Combo pipoca:
+		1ª Clicar no tipo de combo;
+		2ª Confirmar pedido;
+		3ª Adicionar ao carrinho;
+
+	- Carrinho:
+		1ª Criar pedidos como bilhete ou combo de pipoca;
+		2ª Adicionar pedido ao carrinho;
+		3ª Exibir cada item;
+		4ª Exibir total;
+		5ª Clicar em finalizar pedido;
+
+	- Pagina de finalização de pedido:
+		1ª Ir para a pagina "Finalizar pedido" do menu lateral ou no carrinho;
+		2ª Clicar em finalizar pedido;
+		3ª Aparecer pop com alerta "Estamos com problema no momento, tente novamente mais tarde"; 
+
+
+	
+
+		- Transformar Cinemax maker em uma navBar com menu de seleção;
+		- No menu para adicionar filmes, troque os inputs Genero, classificação para menu de seleção;

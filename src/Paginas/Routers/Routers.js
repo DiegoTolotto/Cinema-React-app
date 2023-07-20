@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PostFilme from '../../Paginas/postFilme/postFilme';
+import PostFilme from '../postFilme/postFilme';
 import DeletaFilme from '../../components/deletaFilmes/DeletaFilme';
 import Home from "../Home"
 import {

@@ -31,7 +31,8 @@ function BannerFilme() {
           <ReactPlayer 
           playing={true} 
           light="https://uploads.jovemnerd.com.br/wp-content/uploads/2023/04/barbie_template_poster_site__52e29t424.jpg" 
-          url={filmes[17].trailer} className="banner" />
+          url={filmes[17].trailer} 
+          className="banner" />
 
         </div>
         <div>
