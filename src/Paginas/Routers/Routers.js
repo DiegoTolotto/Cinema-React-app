@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PostFilme from '../postFilme/postFilme';
-import DeletaFilme from '../../components/deletaFilmes/DeletaFilme';
+import DeletaFilme from '../deletaFilmes/DeletaFilme';
 import Home from "../Home"
 import {
     BrowserRouter as Router,
